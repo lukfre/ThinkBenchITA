@@ -1,0 +1,22 @@
+{
+  "_note": "Italian for the words LiveCodeBench programs must print (meta.fixed_output_words). Applied to the statement (the ⟦OUT_n⟧ placeholders) and, by the scorer, to the expected output of every test of the Italian item. Names and the honorific 'san' stay as they are. Proposed 2026-11-02, to confirm in the native read.",
+  "words": {
+    "Yes": "Sì",
+    "No": "No",
+    "YES": "SÌ",
+    "NO": "NO",
+    "First": "Primo",
+    "Second": "Secondo",
+    "Bat": "Mazza",
+    "Glove": "Guanto",
+    "Draw": "Pareggio",
+    "Unreachable": "Irraggiungibile",
+    "undecidable": "indecidibile",
+    "infinite": "infinito",
+    "Takahashi": "Takahashi",
+    "Aoki": "Aoki",
+    "Alice": "Alice",
+    "Bob": "Bob",
+    "san": "san"
+  }
+}

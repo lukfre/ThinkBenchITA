@@ -1,0 +1,10 @@
+# Qwen/Qwen3-4B-Thinking-2507: thinking only. Its template opens <think> in the prompt; the
+# harness detects it and puts the tag back in front of the stored output.
+# Fits one 24 GB GPU with 32k new tokens (about 85k tokens of KV cache): use --gpus 0 1 for two copies.
+# Qwen recommends up to 81,920 new tokens on hard problems; the suite keeps its 32k for comparability.
+model:
+  path: Qwen/Qwen3-4B-Thinking-2507
+  max_model_len: 40960
+  tensor_parallel_size: 1
+  chat_template_kwargs: {}
+think_delims: ["<think>", "</think>"]

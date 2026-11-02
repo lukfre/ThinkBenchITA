@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+
+# Built data: gated sources (GPQA, ZebraLogic) must never be published.
+data/
+# Downloaded or generated inputs (fetch_data.py, zebra_generate.py), the Zebra generator clone
+.cache/
+# Run outputs and side-by-side samples (may quote gated items)
+runs/
+reports/samples/

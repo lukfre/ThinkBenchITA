@@ -1,0 +1,38 @@
+# X-AlpacaEval: reference outputs and pairwise judge, following AlpacaEval 2
+# (tatsu-lab/alpaca_eval, annotator config weighted_alpaca_eval_gpt4_turbo, commit cd543a14).
+#
+# AlpacaEval 2 standard: judge = GPT-4 Turbo (gpt-4-1106-preview), reference outputs = GPT-4
+# Turbo's own answers, preference read from the judge's probabilities of the two output ids,
+# position of the two outputs randomised per item, headline metric = length-controlled win rate.
+#
+# Results are comparable only between runs that share reference outputs, judge model and judge
+# prompt (the prompt hash is stored with every judgment). Do not edit the prompts once runs
+# have started.
+#
+# Before relying on the Italian numbers: (1) validate the length-controlled win rate on Italian,
+# (2) run a meta-evaluation of the judge against human judgments on Italian. See README, To do.
+
+reference:
+  # English: AlpacaEval 2's official reference outputs (GPT-4 Turbo), no generation needed.
+  en_official: true
+  # Italian: no official outputs exist; generated from the Italian instructions with this model.
+  # AlpacaEval 2's reference model is gpt-4-1106-preview: a one-off cost (805 answers), and it
+  # keeps the Italian reference consistent with the official English one. Check it is still served.
+  model: gpt-4-1106-preview
+  base_url: https://api.openai.com/v1
+  api_key_env: OPENAI_API_KEY
+  temperature: 0.0
+  max_tokens: 2048
+  concurrency: 8
+
+judge:
+  # AlpacaEval 2's judge is gpt-4-1106-preview, too expensive to judge every run (2026-10-15):
+  # choose a cheaper judge, then validate it against human judgments in BOTH languages.
+  model: JUDGE_MODEL_PLACEHOLDER
+  base_url: https://api.openai.com/v1
+  api_key_env: OPENAI_API_KEY
+  temperature: 1                   # as AlpacaEval: only the token probabilities are used
+  max_tokens: 1
+  top_logprobs: 5
+  concurrency: 8
+  seed: 20261015                   # position of the two outputs, per item

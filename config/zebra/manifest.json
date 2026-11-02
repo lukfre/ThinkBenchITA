@@ -1,0 +1,64 @@
+{
+  "generator": "github.com/alexandrainst/zebra_puzzles",
+  "commit": "9109b89422ddebedba59d689903ddffd9daca2c3",
+  "configs": {
+    "it": {
+      "path": "config/zebra/it_case.yaml",
+      "sha256": "994a37d7465deb6ea0a28a4473344db8abe3fac7433324cb1bb8eb22926de349"
+    },
+    "en": {
+      "path": "config/zebra/en_houses.yaml",
+      "sha256": "52ab955d300fdb3c50f4d159755896f920f560405534dddb4db7aefa334c2055"
+    }
+  },
+  "sizes": [
+    "2x2",
+    "2x3",
+    "2x4",
+    "2x5",
+    "2x6",
+    "3x2",
+    "3x3",
+    "3x4",
+    "3x5",
+    "3x6",
+    "4x2",
+    "4x3",
+    "4x4",
+    "4x5",
+    "4x6",
+    "5x2",
+    "5x3",
+    "5x4",
+    "5x5",
+    "5x6",
+    "6x2",
+    "6x3",
+    "6x4",
+    "6x5",
+    "6x6"
+  ],
+  "per_size": 20,
+  "n_red_herrings": 0,
+  "seeds": [
+    0,
+    499
+  ],
+  "header_order": "config",
+  "answer_keys": {
+    "it": "casa",
+    "en": "house"
+  },
+  "files": {
+    "it": {
+      "file": ".cache/zebra_gen/it.jsonl",
+      "rows": 500,
+      "sha256": "0f517938504e7bbfa637d32ca084f16dbf88f3a57fb858add11a064ee2b26f9f"
+    },
+    "en": {
+      "file": ".cache/zebra_gen/en.jsonl",
+      "rows": 500,
+      "sha256": "a4482b663392fb66ec0ac5cc9ebb4635dab4fcc726bd53914b181ff06e58d09b"
+    }
+  }
+}

@@ -1,0 +1,4 @@
+{"id": "aime25-I-10", "lang": "it", "kind": "translation_style", "detail": "\"pesantemente delineati\" is a calque of \"heavily outlined\"; \"bordati in grassetto\" would be natural"}
+{"id": "aime25-II-03", "lang": "it", "kind": "translation_style", "detail": "\"rosso è solido, blu è tratteggiato\": \"solid\" is \"continuo\" for a line; \"segmenti di linea unitaria\" is awkward (\"segmenti unitari\")"}
+{"id": "aime25-II-12", "lang": "it", "kind": "translation_style", "detail": "`$11$-sided` became \"con 11 lati\" and \"11-gono\" in plain text, outside math mode (harmless)"}
+{"id": null, "lang": "it", "kind": "translation_style", "detail": "\"relatively prime\" is rendered both as \"relativamente primi\" (aime25-I-07, aime25-I-08, aime25-I-09, aime25-II-04) and as \"primi tra loro\" (aime25-II-06); the second is the usual Italian term"}

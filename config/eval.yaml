@@ -1,0 +1,48 @@
+# Evaluation run configuration. Sampling defaults follow the Olmo 3 chat suite
+# (temperature 0.6, top-p 0.95, 32768 new tokens; N=10 for code, N=32 for AIME).
+
+model:
+  path: Qwen/Qwen3-8B
+  max_model_len: 40960            # prompt + max_tokens must fit
+  tensor_parallel_size: 1
+  gpu_memory_utilization: 0.90
+  chat_template_kwargs: {}        # passed to the chat template, e.g. {enable_thinking: true}
+
+think_delims: ["<think>", "</think>"]
+
+sampling:
+  temperature: 0.6
+  top_p: 0.95
+  max_tokens: 32768
+  seed: 42
+  n: 1                            # samples per item
+
+ks: [1, 5, 10]                    # pass@k is reported for every k <= n
+
+scoring:
+  workers: 8                      # parallel sandboxes for code_exec
+  code_timeout: 60                # seconds per HumanEval+/MBPP+ program
+  lcb_timeout_per_test: 6
+  lcb_timeout_total: 300
+  memory_mb: 4096
+
+# langs: which files to run. filter: keep items whose meta matches. group_by: extra breakdowns.
+# Languages whose file only holds placeholders (pending translation) are skipped.
+benchmarks:
+  polymath:      {langs: [it, en], filter: {default: true}, group_by: [level]}   # medium + high; drop the filter for low/top
+  mclm_math100:  {langs: [it, en], group_by: [level, subject]}
+  mclm_aime2024: {langs: [it, en], filter: {default: true}, sampling: {n: 32}}  # 29: II-08 is broken in MCLM
+  aime25:        {langs: [it, en], sampling: {n: 32}}
+  invalsi_mate:  {langs: [it], filter: {default: true}, group_by: [type, grade]}   # diagnostic; 397 = the paper's 400 minus 1 broken and 2 flawed
+  gpqa:          {langs: [it, en]}                                                # Diamond, 197: one item has its gold twice
+  gpqa_main:     {enabled: false, langs: [it, en], filter: {default: true}, group_by: [is_diamond]}   # all of GPQA main
+  zebra:         {enabled: false, langs: [en], group_by: [difficulty]}           # ZebraLogic, English reference only; the suite uses zebra_gen (2026-10-16)
+  humaneval:     {langs: [it, en], filter: {default: true}, sampling: {n: 10}}   # 163: /32's test is broken
+  humaneval_mhe: {enabled: false, langs: [it], sampling: {n: 10}}                 # alternative Italian side, 40/164 items flawed
+  mbppplus:      {langs: [it, en], sampling: {n: 10}}
+  livecodebench: {langs: [it, en], sampling: {n: 10}, group_by: [difficulty]}
+  multi_if:      {langs: [it, en], loop_note: "loops here are mostly drafts of the answer rewritten while checking it"}   # the 492 shared ids
+  multi_if_full: {enabled: false, langs: [it, en]}                                   # every item, 493 / 909
+  aiw:           {langs: [it, en], sampling: {n: 32}, group_by: [subset, prompt_type, variation]}  # many samples per prompt, as the paper
+  xalpaca:       {langs: [it, en]}                                                # scored later by xalpaca_judge.py
+  zebra_gen:     {langs: [it, en], group_by: [size_class]}                       # generated, parallel; see zebra_generate.py

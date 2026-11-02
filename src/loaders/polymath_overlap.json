@@ -1,0 +1,33 @@
+{
+ "_doc": "PolyMath-high problems that are also items of other benchmarks in this suite (same answer, text similarity > 0.6), found 2026-10-15.",
+ "also_in": {
+  "polymath-high-000": "aime25-I-01",
+  "polymath-high-001": "aime25-I-02",
+  "polymath-high-002": "aime25-I-03",
+  "polymath-high-003": "aime25-I-04",
+  "polymath-high-004": "aime25-I-06",
+  "polymath-high-005": "aime25-I-07",
+  "polymath-high-006": "aime25-I-08",
+  "polymath-high-007": "aime25-I-09",
+  "polymath-high-008": "aime25-I-10",
+  "polymath-high-009": "aime25-I-11",
+  "polymath-high-010": "aime25-I-12",
+  "polymath-high-011": "aime25-I-13",
+  "polymath-high-012": "aime25-I-14",
+  "polymath-high-013": "aime25-I-15",
+  "polymath-high-014": "mclm-aime2024-003",
+  "polymath-high-015": "mclm-aime2024-004",
+  "polymath-high-016": "mclm-aime2024-005",
+  "polymath-high-017": "mclm-aime2024-006",
+  "polymath-high-018": "mclm-aime2024-007",
+  "polymath-high-019": "mclm-aime2024-008",
+  "polymath-high-020": "mclm-aime2024-009",
+  "polymath-high-021": "mclm-aime2024-010",
+  "polymath-high-022": "mclm-aime2024-011",
+  "polymath-high-023": "mclm-aime2024-012",
+  "polymath-high-024": "mclm-aime2024-013",
+  "polymath-high-025": "mclm-aime2024-014",
+  "polymath-high-026": "mclm-aime2024-000",
+  "polymath-high-028": "mclm-aime2024-002"
+ }
+}

@@ -1,0 +1,243 @@
+{
+ "_doc": "LiveCodeBench problems whose expected output contains fixed English words, found 2026-10-15 by scanning every public and private test output (612 problems) and reading the ambiguous cases. These words must stay in English in the Italian statement, quoted or not. 28 more problems have letters in their output that are not language (random strings, or input strings echoed back) and are not listed.",
+ "words": {
+  "lcb-1873_A": [
+   "NO",
+   "YES"
+  ],
+  "lcb-1883_B": [
+   "NO",
+   "YES"
+  ],
+  "lcb-1899_A": [
+   "First",
+   "Second"
+  ],
+  "lcb-3511": [
+   "Alice",
+   "Bob"
+  ],
+  "lcb-abc301_c": [
+   "No",
+   "Yes"
+  ],
+  "lcb-abc302_c": [
+   "No",
+   "Yes"
+  ],
+  "lcb-abc303_a": [
+   "No",
+   "Yes"
+  ],
+  "lcb-abc303_c": [
+   "No",
+   "Yes"
+  ],
+  "lcb-abc304_c": [
+   "No",
+   "Yes"
+  ],
+  "lcb-abc304_e": [
+   "No",
+   "Yes"
+  ],
+  "lcb-abc307_b": [
+   "No",
+   "Yes"
+  ],
+  "lcb-abc307_c": [
+   "No",
+   "Yes"
+  ],
+  "lcb-abc308_a": [
+   "No",
+   "Yes"
+  ],
+  "lcb-abc308_d": [
+   "No",
+   "Yes"
+  ],
+  "lcb-abc309_a": [
+   "No",
+   "Yes"
+  ],
+  "lcb-abc310_b": [
+   "No",
+   "Yes"
+  ],
+  "lcb-abc312_a": [
+   "No",
+   "Yes"
+  ],
+  "lcb-abc320_d": [
+   "undecidable"
+  ],
+  "lcb-abc321_a": [
+   "No",
+   "Yes"
+  ],
+  "lcb-abc322_d": [
+   "No",
+   "Yes"
+  ],
+  "lcb-abc323_a": [
+   "No",
+   "Yes"
+  ],
+  "lcb-abc324_a": [
+   "No",
+   "Yes"
+  ],
+  "lcb-abc324_b": [
+   "No",
+   "Yes"
+  ],
+  "lcb-abc325_a": [
+   "san"
+  ],
+  "lcb-abc326_a": [
+   "No",
+   "Yes"
+  ],
+  "lcb-abc326_d": [
+   "No",
+   "Yes"
+  ],
+  "lcb-abc327_a": [
+   "No",
+   "Yes"
+  ],
+  "lcb-abc327_c": [
+   "No",
+   "Yes"
+  ],
+  "lcb-abc327_d": [
+   "No",
+   "Yes"
+  ],
+  "lcb-abc329_e": [
+   "No",
+   "Yes"
+  ],
+  "lcb-abc333_b": [
+   "No",
+   "Yes"
+  ],
+  "lcb-abc334_a": [
+   "Bat",
+   "Glove"
+  ],
+  "lcb-abc336_a": [
+   "L",
+   "o",
+   "n",
+   "g"
+  ],
+  "lcb-abc337_a": [
+   "Takahashi",
+   "Aoki",
+   "Draw"
+  ],
+  "lcb-abc337_b": [
+   "No",
+   "Yes"
+  ],
+  "lcb-abc338_a": [
+   "No",
+   "Yes"
+  ],
+  "lcb-abc338_e": [
+   "No",
+   "Yes"
+  ],
+  "lcb-abc338_f": [
+   "No"
+  ],
+  "lcb-abc341_e": [
+   "No",
+   "Yes"
+  ],
+  "lcb-abc342_e": [
+   "Unreachable"
+  ],
+  "lcb-abc343_e": [
+   "No",
+   "Yes"
+  ],
+  "lcb-abc344_c": [
+   "No",
+   "Yes"
+  ],
+  "lcb-abc345_d": [
+   "No",
+   "Yes"
+  ],
+  "lcb-abc346_b": [
+   "No",
+   "Yes"
+  ],
+  "lcb-abc347_c": [
+   "No",
+   "Yes"
+  ],
+  "lcb-abc348_d": [
+   "No",
+   "Yes"
+  ],
+  "lcb-abc349_b": [
+   "No",
+   "Yes"
+  ],
+  "lcb-abc349_c": [
+   "No",
+   "Yes"
+  ],
+  "lcb-abc350_a": [
+   "No",
+   "Yes"
+  ],
+  "lcb-abc352_a": [
+   "No",
+   "Yes"
+  ],
+  "lcb-abc355_b": [
+   "No",
+   "Yes"
+  ],
+  "lcb-abc356_b": [
+   "No",
+   "Yes"
+  ],
+  "lcb-abc358_a": [
+   "No",
+   "Yes"
+  ],
+  "lcb-abc360_a": [
+   "No",
+   "Yes"
+  ],
+  "lcb-abc360_b": [
+   "No",
+   "Yes"
+  ],
+  "lcb-abc361_b": [
+   "No",
+   "Yes"
+  ],
+  "lcb-abc362_b": [
+   "No",
+   "Yes"
+  ],
+  "lcb-abc362_c": [
+   "No",
+   "Yes"
+  ],
+  "lcb-abc364_a": [
+   "No",
+   "Yes"
+  ],
+  "lcb-abc365_c": [
+   "infinite"
+  ]
+ }
+}

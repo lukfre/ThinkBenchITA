@@ -1,0 +1,9 @@
+{"id": "polymath-top-013", "lang": null, "kind": "gold_unscorable", "detail": "a family with constraints (alpha in {-1,0,1}, beta real) that no single expression captures; also '\\alphax' is malformed"}
+{"id": "polymath-medium-036", "lang": null, "kind": "gold_repaired", "detail": "malformed LaTeX: \\right\\] -> \\right]"}
+{"id": "polymath-medium-111", "lang": null, "kind": "gold_repaired", "detail": "missing closing brace restored after 2\\sqrt{2} (value checked numerically against the integral: 0.6232252401)"}
+{"id": "polymath-medium-058", "lang": null, "kind": "gold_repaired", "detail": "same matrix written as pmatrix instead of \\left[\\begin{array}...\\right], which math_verify parses"}
+{"id": "polymath-top-050", "lang": null, "kind": "gold_repaired", "detail": "prose '2^{2^l} for l=1,2,4,8' written as the set of its four values"}
+{"id": "polymath-top-037", "lang": null, "kind": "gold_repaired", "detail": "prose '... and ... \\pm ...' written as the set of its three values"}
+{"id": "polymath-top-093", "lang": null, "kind": "gold_repaired", "detail": "prose '... and ...' written as a set of two equations"}
+{"id": "polymath-top-088", "lang": null, "kind": "gold_repaired", "detail": "prose 'for any constant c' dropped; PARTIAL: matches only the factored form with the letter c"}
+{"id": null, "lang": null, "kind": "overlap_with_suite", "detail": "28 PolyMath-high problems are also in other benchmarks of this suite: 14 in aime25, 14 in mclm_aime2024 (meta.also_in)"}

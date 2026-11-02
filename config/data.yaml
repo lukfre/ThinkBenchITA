@@ -1,0 +1,31 @@
+# The built benchmarks, published by publish_data.py and downloaded by fetch_data.py. The dataset
+# is private (members of minerva-post-training): it holds GPQA, whose terms forbid showing its
+# examples publicly, and the licences are to be checked before any release.
+hf_repo: minerva-post-training/ThinkBenchITA
+revision: 0f4367592bea4f880aa7c8377788414846e461c5   # 2026-11-02; publish_data.py prints the next one
+
+benchmarks:        # the published ones: everything enabled in config/eval.yaml
+  - polymath
+  - mclm_math100
+  - mclm_aime2024
+  - aime25
+  - invalsi_mate
+  - gpqa
+  - gpqa_main
+  - humaneval
+  - mbppplus
+  - livecodebench
+  - multi_if
+  - multi_if_full
+  - aiw
+  - zebra_gen
+  - xalpaca
+
+# Our raw files, needed only to rebuild from the sources (fetch_data.py --sources DIR, then prepare.py).
+# Not on the Hub: maintainers keep them. Path in DIR -> path in this repo; manifest that pins it.
+sources:
+  translation/humaneval.jsonl:     {to: data/_translation/returned/humaneval.jsonl,     manifest: config/translation/manifest.json}
+  translation/mbppplus.jsonl:      {to: data/_translation/returned/mbppplus.jsonl,      manifest: config/translation/manifest.json}
+  translation/livecodebench.jsonl: {to: data/_translation/returned/livecodebench.jsonl, manifest: config/translation/manifest.json}
+  zebra_gen/it.jsonl:              {to: .cache/zebra_gen/it.jsonl,                      manifest: config/zebra/manifest.json}
+  zebra_gen/en.jsonl:              {to: .cache/zebra_gen/en.jsonl,                      manifest: config/zebra/manifest.json}

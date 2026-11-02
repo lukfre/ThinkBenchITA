@@ -1,0 +1,58 @@
+[project]
+name = "thinkbench-ita"
+version = "0.1.0"
+description = "ThinkBenchITA: Italian (+ parallel English) benchmarks for reasoning models, run with vLLM"
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+    "huggingface-hub",
+    "pandas",
+    "pyarrow",
+    "pyyaml",
+    "math-verify[antlr4-13-2]>=0.8.0",
+    # IFEval / Multi-IF checkers
+    "langdetect",
+    "nltk",
+    "emoji",
+    "absl-py",
+    # code_exec: libraries the EvalPlus tests import
+    "numpy",
+    # judge (OpenAI-compatible endpoint)
+    "openai",
+    "wordfreq>=3.1.1",
+]
+
+[project.optional-dependencies]
+# Generation. vLLM 0.8.5 is the last release built on torch 2.6, the last
+# torch with cu124 wheels (the local driver, 550.x, supports CUDA 12.4 only).
+gen = [
+    "vllm==0.8.5.post1",
+    "torch==2.6.0",
+    # vLLM 0.8.5 predates transformers 5 (it reads tokenizer attributes removed there)
+    "transformers>=4.51.1,<4.54",
+    # triton (torch.compile) imports setuptools at run time and does not declare it
+    "setuptools<81",
+]
+
+# X-AlpacaEval length-controlled win rate (AlpacaEval 2's GLM)
+judge = ["alpaca-eval==0.6.6", "datasets>=3.0"]
+notebook = [
+    "ipykernel>=7.4.0",
+]
+
+[dependency-groups]
+dev = ["pytest"]
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu124" }
+torchvision = { index = "pytorch-cu124" }
+torchaudio = { index = "pytorch-cu124" }
+
+[[tool.uv.index]]
+name = "pytorch-cu124"
+url = "https://download.pytorch.org/whl/cu124"
+explicit = true
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

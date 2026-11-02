@@ -1,0 +1,10 @@
+# Qwen/Qwen3-8B, thinking mode (the template's default; enable_thinking set explicitly).
+# Sampling stays the suite's (config/eval.yaml, Olmo 3): the same for every model, so scores compare.
+# Qwen recommends top_k 20 in thinking mode and up to 38,912 new tokens on competition math.
+# bf16 with 32k new tokens does not fit one 24 GB GPU: use tensor_parallel_size 2.
+model:
+  path: Qwen/Qwen3-8B
+  max_model_len: 40960
+  tensor_parallel_size: 2
+  chat_template_kwargs: {enable_thinking: true}
+think_delims: ["<think>", "</think>"]

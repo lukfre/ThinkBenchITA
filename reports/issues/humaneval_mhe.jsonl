@@ -1,0 +1,41 @@
+{"id": "HumanEval/115", "lang": null, "kind": "prompt_differs_from_humaneval", "detail": "HumanEval+ ships a corrected prompt; the Italian translation was made from the original HumanEval text"}
+{"id": "HumanEval/17", "lang": "it", "kind": "content_problem", "detail": "value the function must return/accept translated: o|"}
+{"id": "HumanEval/19", "lang": "it", "kind": "content_problem", "detail": "value the function must return/accept translated: eight, five, four, nine, one, seven, six, three, two"}
+{"id": "HumanEval/63", "lang": "it", "kind": "content_problem", "detail": "content dropped"}
+{"id": "HumanEval/66", "lang": "it", "kind": "content_problem", "detail": "example strings changed: abAB"}
+{"id": "HumanEval/67", "lang": "it", "kind": "content_problem", "detail": "example strings changed: 0 apples and 1 oranges, 2 apples and 3 oranges, 5 apples and 6 oranges"}
+{"id": "HumanEval/68", "lang": "it", "kind": "content_problem", "detail": "content dropped"}
+{"id": "HumanEval/75", "lang": "it", "kind": "content_problem", "detail": "content dropped"}
+{"id": "HumanEval/78", "lang": "it", "kind": "content_problem", "detail": "example strings changed: 123456789ABCDEF0, ABED1A33"}
+{"id": "HumanEval/79", "lang": "it", "kind": "content_problem", "detail": "content dropped"}
+{"id": "HumanEval/81", "lang": "it", "kind": "content_problem", "detail": "content dropped"}
+{"id": "HumanEval/83", "lang": "it", "kind": "content_problem", "detail": "content dropped"}
+{"id": "HumanEval/86", "lang": "it", "kind": "content_problem", "detail": "example strings changed: Hello !!!Wdlor"}
+{"id": "HumanEval/87", "lang": "it", "kind": "content_problem", "detail": "truncated"}
+{"id": "HumanEval/94", "lang": "it", "kind": "content_problem", "detail": "truncated"}
+{"id": "HumanEval/95", "lang": "it", "kind": "content_problem", "detail": "truncated; example strings changed: NC, STATE, ZIP"}
+{"id": "HumanEval/103", "lang": "it", "kind": "content_problem", "detail": "content dropped; example strings changed: 0b1111"}
+{"id": "HumanEval/105", "lang": "it", "kind": "content_problem", "detail": "truncated"}
+{"id": "HumanEval/109", "lang": "it", "kind": "content_problem", "detail": "truncated"}
+{"id": "HumanEval/110", "lang": "it", "kind": "content_problem", "detail": "value the function must return/accept translated: YES"}
+{"id": "HumanEval/111", "lang": "it", "kind": "content_problem", "detail": "content dropped; example strings changed: a, a b b a, a b c a b, b"}
+{"id": "HumanEval/114", "lang": "it", "kind": "content_problem", "detail": "content dropped"}
+{"id": "HumanEval/115", "lang": "it", "kind": "content_problem", "detail": "truncated"}
+{"id": "HumanEval/117", "lang": "it", "kind": "content_problem", "detail": "example strings changed: Hello world, Mary, Mary had a little lamb, Uncle"}
+{"id": "HumanEval/118", "lang": "it", "kind": "content_problem", "detail": "example strings changed: ab"}
+{"id": "HumanEval/119", "lang": "it", "kind": "content_problem", "detail": "value the function must return translated in the prose ('Sì' for 'Yes'); its own example still says 'Yes'"}
+{"id": "HumanEval/121", "lang": "it", "kind": "content_problem", "detail": "content dropped"}
+{"id": "HumanEval/123", "lang": "it", "kind": "content_problem", "detail": "content dropped"}
+{"id": "HumanEval/127", "lang": "it", "kind": "content_problem", "detail": "truncated; value the function must return/accept translated: YES"}
+{"id": "HumanEval/129", "lang": "it", "kind": "content_problem", "detail": "truncated"}
+{"id": "HumanEval/130", "lang": "it", "kind": "content_problem", "detail": "content dropped"}
+{"id": "HumanEval/131", "lang": "it", "kind": "content_problem", "detail": "truncated"}
+{"id": "HumanEval/140", "lang": "it", "kind": "content_problem", "detail": "content dropped; example strings changed: Example"}
+{"id": "HumanEval/141", "lang": "it", "kind": "content_problem", "detail": "value the function must return/accept translated: Yes, dll; example strings changed: 1example.dll, example.txt"}
+{"id": "HumanEval/143", "lang": "it", "kind": "content_problem", "detail": "content dropped; example strings changed: This is a test, go for, is, lets go for swimming"}
+{"id": "HumanEval/145", "lang": "it", "kind": "content_problem", "detail": "content dropped"}
+{"id": "HumanEval/150", "lang": "it", "kind": "content_problem", "detail": "content dropped"}
+{"id": "HumanEval/152", "lang": "it", "kind": "content_problem", "detail": "truncated"}
+{"id": "HumanEval/153", "lang": "it", "kind": "content_problem", "detail": "truncated"}
+{"id": "HumanEval/156", "lang": "it", "kind": "content_problem", "detail": "content dropped"}
+{"id": "HumanEval/158", "lang": "it", "kind": "content_problem", "detail": "content dropped; example strings changed: aaaaaaa, bb, cc, enam"}

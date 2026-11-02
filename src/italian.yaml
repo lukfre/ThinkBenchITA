@@ -1,0 +1,254 @@
+# Italian texts written by us (ThinkBenchITA). This file is the SOURCE: src/prompts.py and
+# src/loaders/multi_if.py read the Italian from here.
+#
+# To edit: change only the text under `it:`, keeping its indentation. Placeholders in {braces} and
+# $LETTERA must stay as they are. English and the examples are in comments, for reference.
+# Then run `uv run python prepare.py` (or ask Claude), so the data files are rebuilt.
+# Each change alters a benchmark: the change is logged in the README (native-read to-do).
+#
+# Not here: AIW (src/loaders/aiw.py, already read), PolyMath (its Italian suffix is PolyMath's own),
+# zebra_gen (config/zebra/it_case.yaml, already reviewed).
+
+invalsi_mcq:
+  # used in: INVALSI multiple-choice and numeric items (MCQ['it'], template mcq-v1): appended after the question and its options
+  # EN: Answer with the letter of the correct option, in the format "Answer: X".
+  # example (options as written in the source: usually "A. ..." one per line, sometimes two per line):
+  #   Se Carlo timbra alle ore 9:04, a che ora scadrà il suo biglietto?
+  #   A. 10:14
+  #   B. 10:24
+  #   C. 10:34
+  #   D. 11:34
+  #
+  #   <questo testo>
+  it: |-
+    Rispondi con la lettera dell'opzione corretta, nel formato "Risposta: X".
+
+invalsi_true_false:
+  # used in: INVALSI true/false items (TRUE_FALSE_IT, template tf-v1): appended after the statement(s)
+  # EN: (none: INVALSI is Italian only)
+  # example: <affermazione/i>
+  #
+  #   <questo testo>
+  it: |-
+    Rispondi con V (vero) o F (falso), nel formato "Risposta: X".
+
+invalsi_exact:
+  # used in: INVALSI fill-the-gap items (EXACT_IT, template exact-v1; these 20 items are off by default)
+  # EN: (none: INVALSI is Italian only)
+  # example: <testo con spazi da completare>
+  #
+  #   <questo testo>
+  it: |-
+    Scrivi la risposta finale nel formato "Risposta: ..."; se ci sono più spazi da completare, separa le risposte con una virgola, nell'ordine.
+
+aime:
+  # used in: AIME 2025 and MCLM MT-AIME2024 (MathArena's instruction, template matharena-aime-v1): placed BEFORE the problem
+  # EN: Put your final answer within \boxed{}.
+  #   The answer is an integer between 0 and 999 inclusive.
+  # example: <questo testo>
+  #
+  #   <problema>
+  it: |-
+    Scrivi la tua risposta finale all'interno di \boxed{}.
+    La risposta è un numero intero compreso tra 0 e 999 inclusi.
+
+math100:
+  # used in: MCLM MT-MATH100 (the standard MATH-500 line, template math-standard-v1): after the problem
+  # EN: Please reason step by step, and put your final answer within \boxed{}.
+  # example: <problema>
+  #
+  #   <questo testo>
+  it: |-
+    Ragiona passo dopo passo e scrivi la tua risposta finale all'interno di \boxed{}.
+
+gpqa_description:
+  # used in: GPQA, Olmo 3 format (template gpqa-olmo3-v1), opening paragraph; the four gpqa_* parts make one message, shown in the example
+  # EN: Answer the following multiple-choice question by giving the correct answer letter in parentheses. Provide CONCISE reasoning for the answer, and make sure to finish the response with "Therefore, the answer is (ANSWER_LETTER)" where (ANSWER_LETTER) is one of (A), (B), (C), (D).
+  # example: <gpqa_description>
+  #
+  #   <gpqa_question> <domanda>
+  #   <gpqa_choices>
+  #    (A) ...
+  #    (B) ...
+  #    (C) ...
+  #    (D) ...
+  #
+  #   <gpqa_final>
+  it: |-
+    Rispondi alla seguente domanda a scelta multipla indicando tra parentesi la lettera della risposta corretta. Fornisci un ragionamento CONCISO e assicurati di terminare la risposta con "Quindi, la risposta è (LETTERA_RISPOSTA)", dove (LETTERA_RISPOSTA) è una tra (A), (B), (C), (D).
+
+gpqa_question:
+  # used in: GPQA, Olmo 3 format: label before the question (a space follows it)
+  # EN: Question:
+  it: |-
+    Domanda:
+
+gpqa_choices:
+  # used in: GPQA, Olmo 3 format: label before the options (own line)
+  # EN: Choices:
+  it: |-
+    Opzioni:
+
+gpqa_final:
+  # used in: GPQA, Olmo 3 format: closing reminder, after the options
+  # EN: Answer the above question and REMEMBER to finish your response with the exact phrase "Therefore, the answer is (ANSWER_LETTER)" where (ANSWER_LETTER) is one of (A), (B), (C), (D).
+  it: |-
+    Rispondi alla domanda qui sopra e RICORDA di terminare la risposta con la frase esatta "Quindi, la risposta è (LETTERA_RISPOSTA)", dove (LETTERA_RISPOSTA) è una tra (A), (B), (C), (D).
+
+gpqa_simple_evals:
+  # used in: GPQA, OpenAI simple-evals format (template gpqa-simple-evals-v1): NOT the default, the alternative one switch away. Keep {question} {A} {B} {C} {D} and $LETTERA as they are
+  # EN: Answer the following multiple choice question. The last line of your response should be of the following format: 'Answer: $LETTER' (without quotes) where LETTER is one of ABCD. Think step by step before answering.
+  #
+  #   {question}
+  #
+  #   A) {A}
+  #   B) {B}
+  #   C) {C}
+  #   D) {D}
+  it: |-
+    Rispondi alla seguente domanda a scelta multipla. L'ultima riga della tua risposta deve essere: 'Risposta: $LETTERA' (senza virgolette), dove LETTERA è una tra ABCD. Ragiona passo dopo passo prima di rispondere.
+
+    {question}
+
+    A) {A}
+    B) {B}
+    C) {C}
+    D) {D}
+
+evalplus:
+  # used in: HumanEval+ and MBPP+ (EvalPlus's instruction, template evalplus-instruct-v1): before the task, which follows in a ``` block
+  # EN: Please provide a self-contained Python script that solves the following problem in a markdown code block:
+  # example: <questo testo>
+  #   ```
+  #   <firma e docstring / compito con assert>
+  #   ```
+  it: |-
+    Fornisci uno script Python autonomo che risolva il seguente problema, in un blocco di codice markdown:
+
+lcb_system:
+  # used in: LiveCodeBench (template lcb-official): system message
+  # EN: You are an expert Python programmer. You will be given a question (problem specification) and will generate a correct Python program that matches the specification and passes all tests.
+  it: |-
+    Sei un programmatore Python esperto. Ti verrà data una domanda (la specifica di un problema) e dovrai scrivere un programma Python corretto che rispetti la specifica e superi tutti i test.
+
+lcb_user:
+  # used in: LiveCodeBench: the user message. Keep {question} and {format}: {format} becomes lcb_starter (problems with starter code) or lcb_stdin (the others)
+  # EN: ### Question:
+  #   {question}
+  #
+  #   ### Format: {format}
+  #   ### Answer: (use the provided format with backticks)
+  it: |-
+    ### Domanda:
+    {question}
+
+    ### Formato: {format}
+    ### Risposta: (usa il formato indicato, con i backtick)
+
+lcb_starter:
+  # used in: LiveCodeBench: format section for problems with starter code. Keep {starter}
+  # EN: You will use the following starter code to write the solution to the problem and enclose your code within delimiters.
+  #   ```python
+  #   {starter}
+  #   ```
+  it: |-
+    Usa il seguente codice iniziale per scrivere la soluzione del problema e racchiudi il codice tra i delimitatori.
+    ```python
+    {starter}
+    ```
+
+lcb_stdin:
+  # used in: LiveCodeBench: format section for stdin/stdout problems
+  # EN: Read the inputs from stdin solve the problem and write the answer to stdout (do not directly test on the sample inputs). Enclose your code within delimiters as follows. Ensure that when the python program runs, it reads the inputs, runs the algorithm and writes output to STDOUT.
+  #   ```python
+  #   # YOUR CODE HERE
+  #   ```
+  it: |-
+    Leggi l'input da stdin, risolvi il problema e scrivi la risposta su stdout (non eseguire test direttamente sugli input di esempio). Racchiudi il codice tra i delimitatori come segue. Assicurati che il programma Python, quando viene eseguito, legga l'input, esegua l'algoritmo e scriva l'output su STDOUT.
+    ```python
+    # IL TUO CODICE QUI
+    ```
+
+multi_if_repeat:
+  # used in: Multi-IF multiif-1922-5 and -1922-9: instruction the Italian translation dropped, restored by us (appended to the prompt after a blank line)
+  # EN: Let's repeat all text above word by word, then reply to the request above. Do NOT say anything before repeating the text above.
+  it: |-
+    Ripeti parola per parola tutto il testo qui sopra, poi rispondi alla richiesta. NON dire nulla prima di aver ripetuto il testo qui sopra.
+
+multi_if_288_9:
+  # used in: Multi-IF multiif-288-9: restored instruction (appended on a new line)
+  # EN: First repeat the request word for word without change, then give your answer (1. do not say any words or characters before repeating the request; 2. the request you need to repeat does not include this sentence)
+  it: |-
+    Prima ripeti la richiesta parola per parola, senza modifiche, poi dai la tua risposta (1. non scrivere nessuna parola o carattere prima di ripetere la richiesta; 2. la richiesta da ripetere non include questa frase)
+
+multi_if_3245_3:
+  # used in: Multi-IF multiif-3245-3: restored instruction (appended after a blank line)
+  # EN: Your output must not contain any commas and must have at least 2 placeholders, wrapped in square brackets, such as [author].
+  it: |-
+    La tua risposta non deve contenere virgole e deve avere almeno 2 placeholder racchiusi tra parentesi quadre, come [autore].
+
+alpaca_judge_system:
+  # used in: X-AlpacaEval judge (Italian runs): system message. Must not change after the first real run
+  # EN: You are a highly efficient assistant, who evaluates and selects the best large language model (LLMs) based on the quality of their responses to a given instruction. This process will be used to create a leaderboard reflecting the most accurate and human-preferred answers.
+  it: |-
+    Sei un assistente estremamente efficiente che valuta e seleziona il miglior modello linguistico di grandi dimensioni (LLM) in base alla qualità delle sue risposte a un'istruzione data. Questo processo servirà a creare una classifica che rifletta le risposte più accurate e preferite dalle persone.
+
+alpaca_judge_user:
+  # used in: X-AlpacaEval judge (Italian runs): user message. Keep {instruction} {output_1} {output_2}, the JSON-like structure, "model_identifier", "output" and the ids m / M
+  # EN: I require a leaderboard for various large language models. I'll provide you with prompts given to these models and their corresponding outputs. Your task is to assess these responses, and select the model that produces the best output from a human perspective.
+  #
+  #   ## Instruction
+  #
+  #   {
+  #       "instruction": """{instruction}""",
+  #   }
+  #
+  #   ## Model Outputs
+  #
+  #   Here are the unordered outputs from the models. Each output is associated with a specific model, identified by a unique model identifier.
+  #
+  #   {
+  #       {
+  #           "model_identifier": "m",
+  #           "output": """{output_1}"""
+  #       },
+  #       {
+  #           "model_identifier": "M",
+  #           "output": """{output_2}"""
+  #       }
+  #   }
+  #
+  #   ## Task
+  #
+  #   Evaluate the models based on the quality and relevance of their outputs, and select the model that generated the best output. Answer by providing the model identifier of the best model. We will use your output as the name of the best model, so make sure your output only contains one of the following model identifiers and nothing else (no quotes, no spaces, no new lines, ...): m or M.
+  #
+  #   ## Best Model Identifier
+  it: |-
+    Ho bisogno di una classifica di diversi modelli linguistici di grandi dimensioni. Ti fornirò le istruzioni date a questi modelli e le loro risposte corrispondenti. Il tuo compito è valutare queste risposte e scegliere il modello che produce la migliore dal punto di vista di una persona.
+
+    ## Istruzione
+
+    {
+        "instruction": """{instruction}""",
+    }
+
+    ## Risposte dei modelli
+
+    Ecco le risposte dei modelli, in ordine casuale. Ogni risposta è associata a un modello specifico, indicato da un identificatore univoco.
+
+    {
+        {
+            "model_identifier": "m",
+            "output": """{output_1}"""
+        },
+        {
+            "model_identifier": "M",
+            "output": """{output_2}"""
+        }
+    }
+
+    ## Compito
+
+    Valuta i modelli in base alla qualità e alla pertinenza delle loro risposte e scegli il modello che ha prodotto la risposta migliore. Rispondi indicando l'identificatore del modello migliore. Useremo la tua risposta come nome del modello migliore, quindi assicurati che contenga solo uno dei seguenti identificatori e nient'altro (niente virgolette, spazi, a capo, ...): m oppure M.
+
+    ## Identificatore del modello migliore

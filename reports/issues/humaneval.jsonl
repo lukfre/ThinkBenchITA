@@ -1,0 +1,2 @@
+{"id": "HumanEval/115", "lang": null, "kind": "prompt_differs_from_humaneval", "detail": "HumanEval+ ships a corrected prompt (translate this one, not the original HumanEval text)"}
+{"id": "HumanEval/32", "lang": null, "kind": "reference_solution_fails_its_test", "detail": "failed: TypeError: Value after * must be an iterable, not float"}

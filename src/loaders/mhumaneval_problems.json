@@ -1,0 +1,253 @@
+{
+ "_doc": "mHumanEval-Expert Italian items with content problems, found 2026-10-15 by comparing each docstring with the original HumanEval (length, example numbers, quoted values, truncation) and reading the flagged items. recoverable = the only problem is a value the function must return/accept that was translated and can be put back from the English. Side-by-side: reports/samples/humaneval_problems.md.",
+ "items": {
+  "HumanEval/17": {
+   "problems": [
+    "value the function must return/accept translated: o|"
+   ],
+   "recoverable": true
+  },
+  "HumanEval/19": {
+   "problems": [
+    "value the function must return/accept translated: eight, five, four, nine, one, seven, six, three, two"
+   ],
+   "recoverable": true
+  },
+  "HumanEval/63": {
+   "problems": [
+    "content dropped"
+   ],
+   "recoverable": false
+  },
+  "HumanEval/66": {
+   "problems": [
+    "example strings changed: abAB"
+   ],
+   "recoverable": false
+  },
+  "HumanEval/67": {
+   "problems": [
+    "example strings changed: 0 apples and 1 oranges, 2 apples and 3 oranges, 5 apples and 6 oranges"
+   ],
+   "recoverable": false
+  },
+  "HumanEval/68": {
+   "problems": [
+    "content dropped"
+   ],
+   "recoverable": false
+  },
+  "HumanEval/75": {
+   "problems": [
+    "content dropped"
+   ],
+   "recoverable": false
+  },
+  "HumanEval/78": {
+   "problems": [
+    "example strings changed: 123456789ABCDEF0, ABED1A33"
+   ],
+   "recoverable": false
+  },
+  "HumanEval/79": {
+   "problems": [
+    "content dropped"
+   ],
+   "recoverable": false
+  },
+  "HumanEval/81": {
+   "problems": [
+    "content dropped"
+   ],
+   "recoverable": false
+  },
+  "HumanEval/83": {
+   "problems": [
+    "content dropped"
+   ],
+   "recoverable": false
+  },
+  "HumanEval/86": {
+   "problems": [
+    "example strings changed: Hello !!!Wdlor"
+   ],
+   "recoverable": false
+  },
+  "HumanEval/87": {
+   "problems": [
+    "truncated"
+   ],
+   "recoverable": false
+  },
+  "HumanEval/94": {
+   "problems": [
+    "truncated"
+   ],
+   "recoverable": false
+  },
+  "HumanEval/95": {
+   "problems": [
+    "truncated",
+    "example strings changed: NC, STATE, ZIP"
+   ],
+   "recoverable": false
+  },
+  "HumanEval/103": {
+   "problems": [
+    "content dropped",
+    "example strings changed: 0b1111"
+   ],
+   "recoverable": false
+  },
+  "HumanEval/105": {
+   "problems": [
+    "truncated"
+   ],
+   "recoverable": false
+  },
+  "HumanEval/109": {
+   "problems": [
+    "truncated"
+   ],
+   "recoverable": false
+  },
+  "HumanEval/110": {
+   "problems": [
+    "value the function must return/accept translated: YES"
+   ],
+   "recoverable": true
+  },
+  "HumanEval/111": {
+   "problems": [
+    "content dropped",
+    "example strings changed: a, a b b a, a b c a b, b"
+   ],
+   "recoverable": false
+  },
+  "HumanEval/114": {
+   "problems": [
+    "content dropped"
+   ],
+   "recoverable": false
+  },
+  "HumanEval/115": {
+   "problems": [
+    "truncated"
+   ],
+   "recoverable": false
+  },
+  "HumanEval/117": {
+   "problems": [
+    "example strings changed: Hello world, Mary, Mary had a little lamb, Uncle"
+   ],
+   "recoverable": false
+  },
+  "HumanEval/118": {
+   "problems": [
+    "example strings changed: ab"
+   ],
+   "recoverable": false
+  },
+  "HumanEval/121": {
+   "problems": [
+    "content dropped"
+   ],
+   "recoverable": false
+  },
+  "HumanEval/123": {
+   "problems": [
+    "content dropped"
+   ],
+   "recoverable": false
+  },
+  "HumanEval/127": {
+   "problems": [
+    "truncated",
+    "value the function must return/accept translated: YES"
+   ],
+   "recoverable": false
+  },
+  "HumanEval/129": {
+   "problems": [
+    "truncated"
+   ],
+   "recoverable": false
+  },
+  "HumanEval/130": {
+   "problems": [
+    "content dropped"
+   ],
+   "recoverable": false
+  },
+  "HumanEval/131": {
+   "problems": [
+    "truncated"
+   ],
+   "recoverable": false
+  },
+  "HumanEval/140": {
+   "problems": [
+    "content dropped",
+    "example strings changed: Example"
+   ],
+   "recoverable": false
+  },
+  "HumanEval/141": {
+   "problems": [
+    "value the function must return/accept translated: Yes, dll",
+    "example strings changed: 1example.dll, example.txt"
+   ],
+   "recoverable": false
+  },
+  "HumanEval/143": {
+   "problems": [
+    "content dropped",
+    "example strings changed: This is a test, go for, is, lets go for swimming"
+   ],
+   "recoverable": false
+  },
+  "HumanEval/145": {
+   "problems": [
+    "content dropped"
+   ],
+   "recoverable": false
+  },
+  "HumanEval/150": {
+   "problems": [
+    "content dropped"
+   ],
+   "recoverable": false
+  },
+  "HumanEval/152": {
+   "problems": [
+    "truncated"
+   ],
+   "recoverable": false
+  },
+  "HumanEval/153": {
+   "problems": [
+    "truncated"
+   ],
+   "recoverable": false
+  },
+  "HumanEval/156": {
+   "problems": [
+    "content dropped"
+   ],
+   "recoverable": false
+  },
+  "HumanEval/158": {
+   "problems": [
+    "content dropped",
+    "example strings changed: aaaaaaa, bb, cc, enam"
+   ],
+   "recoverable": false
+  },
+  "HumanEval/119": {
+   "problems": [
+    "value the function must return translated in the prose ('Sì' for 'Yes'); its own example still says 'Yes'"
+   ],
+   "recoverable": true
+  }
+ }
+}

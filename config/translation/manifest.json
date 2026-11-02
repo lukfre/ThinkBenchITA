@@ -1,0 +1,57 @@
+{
+  "model": "Infomaniak-AI/vllm-translategemma-27b-it",
+  "revision": "be47a43850d00bdf556df71fdff7f9740ded598e",
+  "prompt_template": "<<<source>>>{src}<<<target>>>{tgt}<<<text>>>{text}",
+  "custom_prefix": "<<<custom>>>{instruction}\n\n",
+  "instruction": "Use the informal second person singular instead of the formal or plural form. Copy every ⟦...⟧ marker unchanged.",
+  "frame": {
+    "src": "User1 asks:",
+    "tgt": "L'utente1 chiede:"
+  },
+  "decoding": {
+    "temperature": 0,
+    "max_tokens": 4096
+  },
+  "pipeline_commit": "cee4a48ecff73b51739aa66bf65bcc0415d2d7b9",
+  "pipeline_uncommitted_changes": true,
+  "script": "code_benchmarks.py",
+  "script_sha256": "5faa819f86f59afc1ecdcca274e92d2aa6ae284ae0ee5c96fc618642ac9e8b04",
+  "date": "2026-11-02T15:24:13",
+  "headings": {
+    "Input": "Input",
+    "Output": "Output",
+    "Constraints": "Vincoli",
+    "Note": "Nota",
+    "Notes": "Note",
+    "Example": "Esempio",
+    "Explanation": "Spiegazione",
+    "Sample Input": "Esempio di input",
+    "Sample Output": "Esempio di output"
+  },
+  "benchmarks": {
+    "humaneval": {
+      "rows": 164,
+      "failed": 0,
+      "sha256": "4d56bed9ceda067d2a9b946ce2eac649b50ac5a7a1fb1f7f3c4989a75b28a430"
+    },
+    "mbppplus": {
+      "rows": 378,
+      "failed": 0,
+      "sha256": "2f86ac7f5afe19ca7c2d11f73cab34aa0a820d9f0b00c8ad604c8a8478a1e256"
+    },
+    "livecodebench": {
+      "rows": 612,
+      "failed": 0,
+      "sha256": "d19aec2f7e175696c1b4bb53da6bbb16f1ca5603e2b92de8ee610ea97bb59cbf"
+    }
+  },
+  "notes": [
+    "Only prose is sent to the model; protected pieces are replaced by ⟦Bn⟧ markers and restored verbatim: HumanEval+ doctest lines (>>> and the result line), code outside docstrings and the docstring indentation; MBPP+'s assert line; LiveCodeBench sample blocks, lines without prose (formats, symbolic constraints), LeetCode 'Input:'/'Output:' lines and code fences. Headings are replaced by the fixed mapping in 'headings'.",
+    "HumanEval+: the whole docstring prose is translated, example lines included ('count_upper('aBCdEf') returns 1' -> '... restituisce 1'); calls and quoted values are kept and checked. Wrapped lines may be joined, and continuation lines get the docstring's base indentation.",
+    "LiveCodeBench sample blocks: a sample output is the lines after its heading up to the first blank line; the explanation after it (AtCoder) is translated. Your check that compares everything up to the next heading would count those explanations as part of the block.",
+    "Formula check: $...$ is matched within one line; a few LeetCode statements use '$' as a literal character inside quoted strings.",
+    "Masked output words inside prose: in some AtCoder problems the export masked words that are part of a sentence, not only the printed answer (e.g. lcb-abc362_c 'No sequence X satisfies...' -> '⟦OUT_2⟧ sequenza X soddisfa...', lcb-abc343_e). Once mapped back to Italian output words these sentences may read oddly; lcb-abc343_e failed for this reason.",
+    "Retry: rows failing a check were retried once with $...$, double-quoted values and `code` masked too (notes: 'retry with inline items masked'): 6 HumanEval+ and 17 LiveCodeBench rows.",
+    "Edited by hand (notes: 'edited by hand ...'), after failing the checks twice: lcb-abc343_e, whose last sentence came out with the opposite meaning because ⟦OUT_2⟧ ('No') carried the negation, now '⟦OUT_2⟧: non esistono nove interi ... che soddisfano tutte le condizioni.'; lcb-abc356_e, whose translation stopped after the first sample: the rest (a LaTeX derivation and samples 2-3) is copied from the English with the Italian headings."
+  ]
+}

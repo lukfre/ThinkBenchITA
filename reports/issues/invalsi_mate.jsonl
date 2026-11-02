@@ -1,0 +1,4 @@
+{"id": "invalsi-mate-074", "lang": "it", "kind": "options_not_lettered", "detail": "the four options are listed without letters; the gold 'A' means the first one"}
+{"id": "invalsi-mate-157", "lang": "it", "kind": "gold_duplicated", "detail": "distractor alt3 equals the gold (20): the right answer appears under two letters"}
+{"id": "invalsi-mate-271", "lang": "it", "kind": "broken", "detail": "no question and no options: the context text is repeated twice; the gold 'C' refers to nothing"}
+{"id": "invalsi-mate-289", "lang": "it", "kind": "typo", "detail": "\"Se si sostituisce con un numero naturale\": the variable 'a' is missing after 'sostituisce'; still readable"}
